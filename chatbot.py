@@ -26,7 +26,8 @@ while True:
         today = date.today( )
         print(f"Date is: {today.day}/{today.month}/{today.year}" )
     elif message in musicIntent:
-        os.chdir('/Users/anmolrajarora/Documents/aws' )
+        os.chdir('/Users/anmolrajarora/Documents/aws' )    # for mac
+        #os.chdir('C:\\Users\\Parul\\Music')    - > for windows
         songs = os.listdir( )
         song = random.choice( songs )
         #os.startfile( song ) # for windows
