@@ -26,12 +26,48 @@ while True:
         today = date.today( )
         print(f"Date is: {today.day}/{today.month}/{today.year}" )
     elif message in musicIntent:
-        os.chdir('/Users/anmolrajarora/Documents/aws' )    # for mac
+
+        print('''
+            1. Play a specific song
+            2. Play any random song
+        ''')
+
+        choice = int(input("Enter your choice: "))
+
+        os.chdir('/Users/anmolrajarora/Documents/python' )    # for mac
         #os.chdir('C:\\Users\\Parul\\Music')    - > for windows
+
         songs = os.listdir( )
-        song = random.choice( songs )
-        #os.startfile( song ) # for windows
-        subprocess.call( [ 'open' , song ] )  # for mac
+
+        if choice == 2:
+            song = random.choice( songs )
+            #os.startfile( song ) # for windows
+            subprocess.call( [ 'open' , song ] )  # for mac
+        else:
+            '''for song in songs:
+                print(song)'''
+            for i in range(len(songs)):
+                song_no = str(i + 1)
+                print(f"{song_no}. {songs[i]}")
+            song_no = int(input("Which one do you want to play: "))
+            index = song_no - 1
+            subprocess.call(['open', songs[index]])
+            #os.startfile(songs[index])
+    elif message.startswith("run"):
+        partition = message.partition(' ')
+        print(partition[-1])
+
+        appName = partition[-1]
+        #subprocess.call(['open', '/Applications/' + appName + '.app'])
+
+        applications = ['calc', 'notepad']
+
+        if appName in applications:
+            os.system(appName)
+        else:
+            print("Please enter full path to the application exe file")
+            path = input('Path: ')
+            os.startfile(path)
     elif message == 'new':
         print('nothing new')
     elif message == 'bye' or message == 'stop':
