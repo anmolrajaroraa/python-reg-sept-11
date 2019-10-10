@@ -15,7 +15,11 @@ NameError: name 'request' is not defined
 >>> httpResponse = urlopen('https://www.flipkart.com/pens-stationery/pr?sid=dgv&p[]=facets.serviceability%5B%5D%3Dtrue&offer=nb:mp:094f497f05&fm=neo%2Fmerchandising&iid=M_5b27b13c-8ceb-4a86-a2d1-84c49506159e_2.MB21L5GVY389&ssid=if3ayznw000000001570687752400&otracker=hp_omu_Deals%2Bof%2Bthe%2BDay_4_2.dealCard.OMU_MB21L5GVY389_2&otracker1=hp_omu_PINNED_neo%2Fmerchandising_Deals%2Bof%2Bthe%2BDay_NA_dealCard_cc_4_NA_view-all_2&cid=MB21L5GVY389')
 >>> httpResponse
 <http.client.HTTPResponse object at 0x10557d2b0>
->>> 
+>>>
+
+#Step before importing bs4
+#Open cmd and run ->           pip install bs4
+
 >>> import bs4   #used to get html page from http response
 >>> bs4.BeautifulSoup(httpResponse)
 
