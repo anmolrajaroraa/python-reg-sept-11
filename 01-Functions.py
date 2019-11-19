@@ -4,6 +4,7 @@
 # y = 20
 
 # #    *args -> multiple arguments
+# #    **kwargs -> keyword arguments
 
 # def my_function( x=0 , y=0, *other, **keyValuePairs ):   #function definition  #default arguments  #dynamic arguments
 #     #x = 10   #local variables
