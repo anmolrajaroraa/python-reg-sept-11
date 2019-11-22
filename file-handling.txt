@@ -1,0 +1,27 @@
+File Handling
+
+Modes - read, write, append
+
+r - read (file should exist)
+w - write (file will be created if not found)
+a - append (file will be created if not found)
+
+r+ - read and write
+(file should exist)
+(i will override the data for as much space i need, complete data will not be deleted)
+
+w+ - write and read
+(file will be created if not found)
+(it will delete all the data in already existing file)
+
+a+ - append and read
+(file will be created if not found)
+(I will go to the end of file and start writing from there, already present data will not be modified)
+
+Operations:
+1. Open
+2. r/w/a
+3. Close
+
+Binary files (like images)
+Modes - rb, wb, ab, rb+, wb+, ab+
