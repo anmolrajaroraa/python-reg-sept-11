@@ -1,1 +1,23 @@
-abcdefghefghefghefghefgh
+File Handling
+
+Operations-
+1. Open File using some specific modes
+2. read/write
+3. Close File
+
+Modes-
+1. Read - r  ->  File should exist
+2. Write - w -> File will be created if not found, if file is found existing data will be deleted
+3. Append - a -> File will be created if not found, if file is found, data will be written at the end without overriding or deleting any data
+4. r+
+5. w+
+6. a+
+
+Binary file-
+1. rb
+2. wb
+3. rb+
+4. wb+
+
+CSV file
+ram,ram@gmail.com,ram123
