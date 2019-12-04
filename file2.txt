@@ -7,11 +7,11 @@ Operations-
 
 Modes-
 1. Read - r  ->  File should exist
-2. Write - w -> File will be created if not found, if file is found existing data will be deleted
+2. Write - w -> File will be created if not found, if file is found existing data will be deleted (truncate)
 3. Append - a -> File will be created if not found, if file is found, data will be written at the end without overriding or deleting any data
-4. r+
-5. w+
-6. a+
+4. r+ (read and write) -> read has more priority for us -> file should exist -> overriding will happen at the time of write
+5. w+ (write and read)
+6. a+ (append and read)
 
 Binary file-
 1. rb

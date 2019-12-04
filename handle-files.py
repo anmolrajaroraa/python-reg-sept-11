@@ -17,5 +17,18 @@
 # print(data)
 
 
-file = open("file3.txt", 'a')
-file.write("\nI'm writing for the fourth time")
+# file = open("file3.txt", 'a')
+# file.write("\nI'm writing for the fourth time")
+
+# file = open('file3.txt', 'a+')
+# file.write('Using a+ mode')
+# file.read()
+# file.close()
+
+file = open('image.jpg', 'rb')
+data = file.read()
+file.close()
+
+file = open('copy_image.jpg', 'wb')
+file.write(data)
+file.close()
